@@ -1,29 +1,32 @@
-<!DOCTYPE html>
-<html>
+﻿<!DOCTYPE html>
+<html lang=en>
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta http-equiv="Cache-control" content="no-cache">
-    <title>Home</title>
-
-    <link rel="stylesheet" href="css/framework7.ios.min.css">
-    <link rel="stylesheet" href="css/framework7.ios.colors.min.css">
-    <link rel="stylesheet" href="css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://BoetaRCHubMobileTest.azurewebsites.net/css/site.css">
-    
-    <script src="js/framework7.min.js"></script>
-    <script src="https://BoetaRCHubMobileTest.azurewebsites.net/js/index.js"></script>
-    
+    <meta charset=utf-8>
+    <meta http-equiv=X-UA-Compatible content="IE=edge">
+    <meta name=viewport content="width=device-width,initial-scale=1">
+    <link rel=icon href=favicon.ico>
+    <title>RC Hub</title>
+    <link href=css/Employee.217e8e51.css rel=prefetch>
+    <link href=css/EquipmentRepair.682f1a36.css rel=prefetch>
+    <link href=css/Job.cf4e675b.css rel=prefetch>
+    <link href=css/Login.4684089f.css rel=prefetch>
+    <link href=css/Region.d920fa12.css rel=prefetch>
+    <link href=js/Employee.ea03e513.js rel=prefetch>
+    <link href=js/Employee~EquipmentRepair~Job~Login~Region.7311e8af.js rel=prefetch>
+    <link href=js/EquipmentRepair.1bd5e7f4.js rel=prefetch>
+    <link href=js/Job.82faa1ec.js rel=prefetch>
+    <link href=js/Login.ebf920b5.js rel=prefetch>
+    <link href=js/Region.258641a9.js rel=prefetch>
+    <link href=css/app.87f862e0.css rel=preload as=style>
+    <link href=css/chunk-vendors.270f7cd3.css rel=preload as=style>
+    <link href=js/app.ff40c732.js rel=preload as=script>
+    <link href=js/chunk-vendors.718e7a1c.js rel=preload as=script>
+    <link href=css/chunk-vendors.270f7cd3.css rel=stylesheet>
+    <link href=css/app.87f862e0.css rel=stylesheet>
     
     <script src="cordova.js"></script>
-    
-     <script>
-
+    <script>
         function onDeviceReady(){
-
-            LoadContent();
-
             document.addEventListener("backbutton", onBackKeyDown, false); 
         }
 
@@ -31,38 +34,13 @@
 
         function onBackKeyDown(e) 
         {
-           backToPage(e);
+            cordovaBack(e);
         }
-
-        function LoadContent(){
-
-           $.ajax({
-                type: "get",
-                dataType: "json",
-                url: "https://BoetaRCHubMobileTest.azurewebsites.net/Home/GetHomeHtml",
-                success: function (data) {
-                    if (data.OK) {
-                        $('body').html(data.Message);
-                        startApp("https://BoetaRCHubMobileTest.azurewebsites.net","redcoats");
-                    } else {
-                        alert(data.Message);
-                    }
-                    
-                    navigator.splashscreen.hide();
-                },
-                error: function (x) {
-                    alert("The network is not available." + x.responseText);
-                    navigator.splashscreen.hide();
-                }
-              });
-        }
-
     </script>
-
-    
 </head>
-
 <body>
-
+    <div id=app></div>
+    <script src=js/chunk-vendors.718e7a1c.js></script>
+    <script src=js/app.ff40c732.js></script>
 </body>
 </html>
