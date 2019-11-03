@@ -30,6 +30,10 @@
 <plugin name="cordova-plugin-camera" />
 <plugin name="cordova-plugin-whitelist" />
 <plugin name="cordova-plugin-geolocation" />
+
+<plugin name="cordova-plugin-file" />
+<plugin name="cordova-plugin-file-opener2" />
+
 <plugin name="phonegap-plugin-barcodescanner" >  
     <param name="CAMERA_USAGE_DESCRIPTION" value="To scan barcodes." />  
 </plugin> 
