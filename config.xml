@@ -4,7 +4,6 @@
 <description>Redcoats time sheet application for the building managers</description>
 <author>redcoats</author>
 <content src="index.html"/>
-<preference name="phonegap-version" value="cli-9.0.0" /> 
 <access origin="*"/>
 <allow-intent href="http://*/*"/>
 <allow-intent href="https://*/*"/>
