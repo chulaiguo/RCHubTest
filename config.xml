@@ -19,6 +19,7 @@
 <platform name="ios" >
 <preference name="ios-configuration" value="production"/>
 <preference name="deployment-target" value="8.0"/>
+<preference name="StatusBarBackgroundColor" value="#000000" />
 </platform>
 <platform name="windows" >
 <preference name="windows-publisher-display-name" value="Larry Li"/>
@@ -33,6 +34,7 @@
 
 <plugin name="cordova-plugin-file" />
 <plugin name="cordova-plugin-file-opener2" />
+<plugin name="cordova-plugin-inappbrowser" />
 
 <plugin name="phonegap-plugin-barcodescanner" >  
     <param name="CAMERA_USAGE_DESCRIPTION" value="To scan barcodes." />  
